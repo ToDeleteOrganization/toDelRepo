@@ -8,27 +8,21 @@ public class Client {
 		
 		// project runtime location
 		CompressionWorker cw = new CompressionWorker();
-		cw.setDiskLocation(new ProjectDiskFolder());
 
 		cw.setCs(rar);
-		cw.compress();
+		cw.compress(new ProjectDiskFolder());
 
 		cw.setCs(zip);
-		cw.compress();
+		cw.compress(new ProjectDiskFolder());
 
 
 		// jre runtime location
-		cw = new CompressionWorker();
-		cw.setDiskLocation(new JREDiskFolder());
-
 		cw.setCs(rar);
-		cw.compress();
+		cw.compress(new JREDiskFolder());
 
 		cw.setCs(zip);
-		cw.compress();
-	
-	
-	
+		cw.compress(new JREDiskFolder());
+
 	}
 
 }

@@ -4,17 +4,12 @@ public class CompressionWorker {
 
 	private CompressStrategy cs;
 
-	private DiskFolderCollection folder;
-
-	public void setDiskLocation(DiskFolderCollection folder) {
-		this.folder = folder;
-	}
 
 	public void setCs(CompressStrategy cs) {
 		this.cs = cs;
 	}
 
-	public void compress() {
+	public void compress(DiskFolderCollection folder) {
 		if (cs == null) {
 			cs = new NullCompressStrategy();
 		}
