@@ -1,10 +1,13 @@
 package com.test.dp.iterator;
 
-public class Client {
+import com.test.dp.main.DPArguments;
+import com.test.dp.main.DPExecutor;
 
-	public static void main(String[] args) {
+public class IteratorDPExecutor implements DPExecutor {
+
+	public void execute(DPArguments args) {
 		Store penny = new PennyStore();
-		
+
 		StoreIterator<Product> products = penny.getProducts();
 		System.out.println("Classic iterator version");
 		while (products.hasNext()) {

@@ -1,8 +1,11 @@
 package com.test.dp.interpreter;
 
-public class Client {
+import com.test.dp.main.DPArguments;
+import com.test.dp.main.DPExecutor;
 
-	public static void main(String[] args) {
+public class InterpreterDPClientExecutor implements DPExecutor {
+
+	public void execute(DPArguments args) {
 		String number = "78347889";
 		NumberContext nc = new NumberContext(number);
 

@@ -1,11 +1,14 @@
 package com.test.dp.strategy;
 
-public class Client {
+import com.test.dp.main.DPArguments;
+import com.test.dp.main.DPExecutor;
 
-	public static void main(String[] args) {
+public class StrategyDPExecutor implements DPExecutor {
+
+	public void execute(DPArguments args) {
 		CompressStrategy rar = CompressStrategyUtil.getCompressStrategy("rar");
 		CompressStrategy zip = CompressStrategyUtil.getCompressStrategy("zip");
-		
+
 		// project runtime location
 		CompressionWorker cw = new CompressionWorker();
 
@@ -14,7 +17,6 @@ public class Client {
 
 		cw.setCs(zip);
 		cw.compress(new ProjectDiskFolder());
-
 
 		// jre runtime location
 		cw.setCs(rar);
