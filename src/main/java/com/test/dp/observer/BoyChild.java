@@ -10,7 +10,7 @@ public class BoyChild extends Children {
 		this.parents.add(subj);
 	}
 
-	protected void whatDidYouDoKid(CustomEvent event) {
+	public void whatDidYouDoKid(CustomEvent event) {
 		if (event.isItGood()) {
 			System.out.println("Yeeeeeeeeeeeeee, i'm the best!!!!");
 			notifyObservers(event);

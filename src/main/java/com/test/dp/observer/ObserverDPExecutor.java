@@ -7,7 +7,7 @@ public class ObserverDPExecutor implements DPExecutor{
 
 	public void execute(DPArguments args) {
 		Parent adina = new Mother();
-		Parent ioan = new Mother();
+		Parent ioan = new Father();
 		
 		Children simo = new GirlChild("simo");
 		Children raul = new BoyChild("raul");
