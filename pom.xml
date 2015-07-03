@@ -3,4 +3,8 @@
   <groupId>com.test</groupId>
   <artifactId>testing</artifactId>
   <version>1</version>
+  
+  <dependencies>
+  </dependencies>
+  
 </project>
